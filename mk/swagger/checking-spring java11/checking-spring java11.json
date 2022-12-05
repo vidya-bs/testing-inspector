@@ -5,7 +5,7 @@
     "description" : "New Collection",
     "version" : "1.0"
   },
-  "servers" : [ {
+  "serverr" : [ {
     "url" : "https://dummyjson.com/todos",
     "x-name" : "Server1"
   }, {
@@ -334,5 +334,6 @@
   "x-original-swagger-version" : "2.0",
   "tags" : [ ],
   "security" : [ ],
-  "x-mock" : true
+  "x-mock" : true,
+  "servers" : [ ]
 }
