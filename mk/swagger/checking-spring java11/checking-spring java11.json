@@ -1,0 +1,338 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "checking-spring java11",
+    "description" : "New Collection",
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://dummyjson.com/todos",
+    "x-name" : "Server1"
+  }, {
+    "url" : "https://dummyjson.com/",
+    "x-name" : "Server2"
+  } ],
+  "paths" : {
+    "/random" : {
+      "get" : {
+        "tags" : [ "New Collection" ],
+        "summary" : "todos",
+        "description" : "dummy",
+        "operationId" : "todos",
+        "parameters" : [ {
+          "name" : "Cookie",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "cookie=555"
+        }, {
+          "name" : "dggvfgfg",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "dhdbhdbdh"
+        }, {
+          "name" : "test",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "testingg"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Response for endpoint GET-todos/random",
+            "headers" : {
+              "X-Dns-Prefetch-Control" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Server" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Access-Control-Allow-Origin" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Ratelimit-Remaining" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Content-Type-Options" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Connection" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Download-Options" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Date" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Via" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Frame-Options" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Ratelimit-Reset" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Ratelimit-Limit" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Strict-Transport-Security" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Etag" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Xss-Protection" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Vary" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Content-Length" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Content-Type" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "required" : [ "completed", "id", "todo", "userId" ],
+                  "type" : "object",
+                  "properties" : {
+                    "id" : {
+                      "type" : "integer"
+                    },
+                    "todo" : {
+                      "type" : "string"
+                    },
+                    "completed" : {
+                      "type" : "boolean"
+                    },
+                    "userId" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "example" : "{\"id\":11,\"todo\":\"Text a friend I haven't talked to in a long time\",\"completed\":false,\"userId\":39}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/add" : {
+      "post" : {
+        "tags" : [ "checking-spring java11" ],
+        "summary" : "todos11",
+        "description" : "dummy",
+        "operationId" : "todos11",
+        "parameters" : [ {
+          "name" : "Content-Type",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "application/json"
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Response for endpoint POST-todos/add",
+            "headers" : {
+              "X-Dns-Prefetch-Control" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Server" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Access-Control-Allow-Origin" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Ratelimit-Remaining" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Content-Type-Options" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Connection" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Download-Options" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Date" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Via" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Frame-Options" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Ratelimit-Reset" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Ratelimit-Limit" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Strict-Transport-Security" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Etag" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "X-Xss-Protection" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Vary" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Content-Length" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Content-Type" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "required" : [ "message" ],
+                  "type" : "object",
+                  "properties" : {
+                    "message" : {
+                      "type" : "string"
+                    }
+                  },
+                  "example" : "{\"message\":\"User id is required\"}"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : { },
+  "x-servers" : [ {
+    "url" : "https://dummyjson.com"
+  } ],
+  "x-original-swagger-version" : "2.0",
+  "tags" : [ ],
+  "security" : [ ],
+  "x-mock" : true
+}
