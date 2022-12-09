@@ -1,0 +1,162 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "products-api-get-allproducts-200",
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://mock.apiwiz.io/V1",
+    "x-name" : "Server1"
+  } ],
+  "paths" : {
+    "/products" : {
+      "get" : {
+        "tags" : [ "Products API" ],
+        "summary" : "products-api-get-allproducts-200",
+        "operationId" : "products-api-get-allproducts-200",
+        "parameters" : [ {
+          "name" : "skip",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "10"
+        }, {
+          "name" : "select",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "10"
+        }, {
+          "name" : "x-tenant",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "0c39a75a-3896-4624-9a4a-e9e7273779fc"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "10"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Response for endpoint GET-products",
+            "headers" : {
+              "date" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "content-length" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "server" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "x-envoy-upstream-service-time" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "vary" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "content-type" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "required" : [ "limit", "products", "skip", "total" ],
+                  "type" : "object",
+                  "properties" : {
+                    "products" : {
+                      "type" : "array",
+                      "items" : {
+                        "required" : [ "brand", "category", "description", "discountPercentage", "id", "images", "price", "rating", "stock", "thumbnail", "title" ],
+                        "type" : "object",
+                        "properties" : {
+                          "id" : {
+                            "type" : "integer"
+                          },
+                          "title" : {
+                            "type" : "string"
+                          },
+                          "description" : {
+                            "type" : "string"
+                          },
+                          "price" : {
+                            "type" : "integer"
+                          },
+                          "discountPercentage" : {
+                            "type" : "number"
+                          },
+                          "rating" : {
+                            "type" : "number"
+                          },
+                          "stock" : {
+                            "type" : "integer"
+                          },
+                          "brand" : {
+                            "type" : "string"
+                          },
+                          "category" : {
+                            "type" : "string"
+                          },
+                          "thumbnail" : {
+                            "type" : "string"
+                          },
+                          "images" : {
+                            "type" : "array",
+                            "items" : {
+                              "type" : "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "total" : {
+                      "type" : "integer"
+                    },
+                    "skip" : {
+                      "type" : "integer"
+                    },
+                    "limit" : {
+                      "type" : "integer"
+                    }
+                  },
+                  "example" : "{\n    \"products\": [\n        {\n            \"id\": 1,\n            \"title\": \"iPhone 9\",\n            \"description\": \"An apple mobile which is nothing like apple\",\n            \"price\": 549,\n            \"discountPercentage\": 12.96,\n            \"rating\": 4.69,\n            \"stock\": 94,\n            \"brand\": \"Apple\",\n            \"category\": \"smartphones\",\n            \"thumbnail\": \"https://dummyjson.com/image/i/products/1/thumbnail.jpg\",\n            \"images\": [\n                \"string\"\n            ]\n        }\n    ],\n    \"total\": 100,\n    \"skip\": 0,\n    \"limit\": 30\n}"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : { },
+  "x-original-swagger-version" : "2.0",
+  "tags" : [ ],
+  "security" : [ ],
+  "x-mock" : true
+}
